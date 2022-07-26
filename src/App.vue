@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header @search="searching"></Header>
-    <Main :films="films"></Main>
+    <Header @search="searching" />
+    <Main :films="films" />
     <Footer />
   </div>
 </template>
@@ -26,11 +26,13 @@ export default {
   },
   methods: {
     searching(needle) {
+      //movie search
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
             api_key: "ce232ff9f4f00fd292cb08924ac4c7d2",
             query: needle,
+            language: "it-IT",
           },
         })
         .then((response) => {
@@ -46,7 +48,3 @@ export default {
 </script>
 
 <style lang="scss"></style>
-
-<!-- Key -->
-<!-- ce232ff9f4f00fd292cb08924ac4c7d2 -->
-<!-- https://api.themoviedb.org/3/movie/550?api_key=ce232ff9f4f00fd292cb08924ac4c7d2  -->

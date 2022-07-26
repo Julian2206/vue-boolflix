@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="logo">
       <img src="" alt="" />
     </div>
@@ -13,6 +13,7 @@
       <li>Audio e sottotitoli</li>
     </ul>
 
+    <!-- search -->
     <form @submit.prevent="$emit('search', searchText)">
       <input
         type="text"
@@ -22,7 +23,7 @@
       />
       <button class="button">Cerca</button>
     </form>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -36,4 +37,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

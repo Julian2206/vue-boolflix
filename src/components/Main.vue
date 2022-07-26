@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
+  <main class="main">
     <FilmList :films="films" />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -18,4 +18,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+  background-color: lightgrey;
+}
+</style>
